@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somar</title>
+</head>
+<style>
+    body {
+        font: normal 20pt arial;
+    }
+    div#res { 
+        margin-top: 2px;
+
+    }
+    
+</style>
+
+<body>
+    <h1>vamos somar numeros?!</h1>
+    <input type="number" name="tx1" id="tx1">+
+    <input type="number" name="tx2" id="tx2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res"> resultado </div>
+
+    <h1>multipicar</h1>
+    <input type="number" name="tx3" id="tx3">X
+    <input type="number" name="tx4" id="tx4">
+    <input type="button" value="somar" onclick="multiplicar()">
+    <div id="res2"> resultado </div>
+
+    <h1>divisão</h1>
+
+    <input type="number" name="tx5" id="tx5">÷
+    <input type="number" name="tx6" id="tx6">
+    <input type="button" value="somar" onclick="dividir()">
+    <div id="res3"> resutado </div>
+
+    
+</body>
+<script>
+
+function somar() {
+    let txt1 = document.getElementById('tx1')
+    let txt2 = document.getElementById('tx2')
+    let res = document.getElementById('res')
+    let n1 = Number(txt1.value)
+    let n2 = Number(txt2.value)
+    let s = n1 + n2
+    res.innerHTML = `o valor de ${n1} somando com ${n2} o resultado fica ${s}`
+}
+
+function multiplicar() {
+    let txt3 = document.getElementById('tx3')
+    let txt4 = document.getElementById('tx4')
+    let res = document.getElementById('res2')
+    let n3 = Number(txt3.value)
+    let n4 = Number(txt4.value)
+    let s = n3 * n4
+    res.innerHTML = `o valor de ${n3} somando com ${n4} o resultado fica ${s}`
+}
+function dividir() {
+    let txt5 = document.getElementById('tx5')
+    let txt6 = document.getElementById('tx6')
+    let res = document.getElementById('res3')
+    let n5 = Number(txt5.value)
+    let n6 = Number(txt6.value)
+    let s = n5 / n6
+    res.innerHTML = `o valor de ${n5} somando com ${n6} o resultado fica ${s}`
+}
+
+
+</script>
+</html>
